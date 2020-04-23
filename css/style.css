@@ -1,0 +1,299 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum", "Arial", sans-serif;
+    /* font-family: 'PT Sans', Arial, sans-serif; */
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #ffffff;
+    text-transform: uppercase;
+    
+   background-color: #ffffff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+    
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+  
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    max-width: 940px;
+    margin: auto;
+}
+
+header {
+    background-color: #f4f7f9;
+}
+
+/*=============================== header ============================*/
+
+/*=============================== header-top ===============================*/
+
+.header-top {
+    background-color: #293449;
+}
+
+.header-top-wrap {
+    position: relative;
+
+    display: flex;
+}
+
+.logo a {
+    display: inline-block;
+    width: 220px;
+
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo a::before {
+    content: "ТЕХНОМАРТ";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    padding: 9px 0;
+    padding-bottom: 8px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+    border-top: 1px solid #bf2d38;
+    border-bottom: 5px solid #b52933;
+}
+
+.logo a:hover::before {
+    background-color: #ca2c37;
+    border-top: 1px solid #e03643;
+    border-bottom: 5px solid #9a212a;
+}
+
+.logo a:active::before,
+.logo a:focus::before {
+    background-color: #ba2732;
+    border-top: 1px solid #b02834;
+    border-bottom: 5px solid #8e1e26;
+}
+
+.header-top-wrap form {
+    position: relative;
+    
+    width: 571px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top-wrap input {
+    box-sizing: border-box;
+    width: 100%;
+    
+    margin: 0;
+    padding: 0;
+    padding-left: 49px;
+    padding-right: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+
+    background-color: #293449;
+    border: none;   
+}
+
+.header-top-wrap input::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.header-top-wrap label::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 17px;
+
+    width: 17px;
+    height: 17px;
+
+    background-image: url(../img/icon-search.svg);
+
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.header-top-wrap input:hover + label::before {
+    opacity: 1;
+}
+
+.header-top-wrap input:active + label::before,
+.header-top-wrap input:focus + label::before {
+    background-image: url(../img/icon-search-active.svg);
+
+    opacity: 1;
+}
+
+.header-top-wrap input:hover {
+    background-color: #212a3a;
+}
+
+.header-top-wrap input:active,
+.header-top-wrap input:focus {
+    color: #000000;
+
+    background-color: #ffffff;
+
+    outline: none;
+}
+
+.header-top-user-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.basket {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.basket a {
+    position: relative;
+
+    display: inline-block;
+    padding: 12px 0;
+    padding-left: 44px;
+    padding-right: 31px;
+
+    font-size: 17px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: none;
+    color: #ffffff;
+}
+
+.basket li:first-child a::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 17px;
+
+    width: 14px;
+    height: 16px;
+
+    background-image: url(../img/icon-bookmark.svg);
+
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.basket li:last-child a::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 14px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url(../img/cart-icon.svg);
+
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.basket a span {
+    padding-left: 5px;
+}
+
+.basket a:hover {
+    background-color: #212a3a;
+}
+
+.basket a:active,
+.basket a:focus {
+    background-color: #161d29;
+
+    outline: none;
+}
+
+.basket li:first-child a:hover::before,
+.basket li:last-child a:hover::before {
+    opacity: 1;
+}
+
+.basket li:first-child a:active:before,
+.basket li:first-child a:focus:before,
+.basket li:last-child a:active::before,
+.basket li:last-child a:focus::before {
+    opacity: 0.5;
+}
+
+.header-top-button {
+    display: inline-block;
+    width: 150px;
+    padding: 11px 0;
+
+    font-size: 17px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: #63a63e;
+}
+
+.header-top-button:hover {
+    background-color: #5fbb2d;
+}
+
+.header-top-button:active,
+.header-top-button:focus {
+    color: #a6bd9c;
+
+    background-color: #518534;
+
+    outline: none;
+
+   
+}
+
+/*=============================== header-offer ===============================*/
+
+
+
+
+/*=============================== nav ===============================*/
+
+
