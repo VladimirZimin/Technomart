@@ -50,6 +50,7 @@ header {
 
 .header-top {
     background-color: #293449;
+    margin-bottom: 49px;
 }
 
 .header-top-wrap {
@@ -291,9 +292,198 @@ header {
 
 /*=============================== header-offer ===============================*/
 
+.header-offer .container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 39px;
+}
+
+.header-offer h1 {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    padding-left: 53px;
+    padding-right: 25px;
+
+    font-size: 16px;
+    line-height: 23px;
+    font-style: italic;
+    font-family: 400i;
+    text-transform: none;
+    color: #ee3643;
+}
+
+
+.contact {
+    box-sizing: border-box;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-telephone {
+    position: relative;
+
+    margin: 0;
+    margin-right: 30px;
+    padding: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 71px;
+
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+
+    border: 3px solid #ffffff;
+}
+
+.contact-telephone::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    width: 19px;
+    height: 19px;
+
+    background-image: url(../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+.contact-address {
+    margin: 0;
+    padding: 0;
+    padding-left: 9px;
+    padding-top: 5px;
+
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+    color: #32425c;
+}
+
+.header-offer-user {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.header-offer-user a {
+    display: inline-block;
+    padding: 10px 25px;
+
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: none;
+    text-decoration: none;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.header-offer-user li:first-child a {
+    position: relative;
+
+    margin-right: 10px;
+    padding-left: 48px;
+}
+
+.header-offer-user li:first-child a::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 15px;
+
+    width: 20px;
+    height: 17px;
+
+    background-image: url(../img/icon-login.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+.header-offer-user li:first-child a:hover::before {
+    opacity: 1;
+}
+
+.header-offer-user li:first-child a:focus::before,
+.header-offer-user li:first-child a:active::before {
+    opacity: 0.3;
+} {
+    opacity: 1;
+}
+
+.header-offer-user a:hover {
+    color: #ee3643;
+}
+
+.header-offer-user a:focus,
+.header-offer-user a:active {
+    color: #cacaca;
+
+    outline: none;
+}
 
 
 
 /*=============================== nav ===============================*/
 
+.navigation {
+    padding-bottom: 60px;
+}
 
+.navigation .container {
+    border-bottom: 5px solid #293449;
+    background-color: #32425c;
+}
+
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-navigation a {
+    display: inline-block;
+    padding: 19px 30px;
+
+    font-size: 17px;
+    line-height: 17px;
+    text-transform: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.main-navigation-current a {
+    padding-left: 53px;
+}
+
+.main-navigation li:last-child a {
+    padding-right: 55px;
+}
+
+.main-navigation a:hover {
+    background-color: #293449;
+}
+
+.main-navigation a:focus,
+.main-navigation a:active {
+    color: rgba(255, 255, 255, 0.5);
+
+    background-color: #1d2739;
+}
