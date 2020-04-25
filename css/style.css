@@ -421,8 +421,6 @@ header {
 .header-offer-user li:first-child a:focus::before,
 .header-offer-user li:first-child a:active::before {
     opacity: 0.3;
-} {
-    opacity: 1;
 }
 
 .header-offer-user a:hover {
