@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    min-width: 1200px;
     margin: 0;
     padding: 0;
 
@@ -11,7 +12,7 @@ body {
 	color: #ffffff;
     text-transform: uppercase;
     
-   background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 img {
@@ -326,18 +327,27 @@ header {
 .contact-telephone {
     position: relative;
 
+    display: block;
     margin: 0;
     margin-right: 30px;
-    padding: 0;
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 71px;
 
+
     font-size: 21px;
     line-height: 21px;
+    text-decoration: none;
     color: #ee3643;
 
     border: 3px solid #ffffff;
+}
+
+.contact-telephone:focus,
+.contact-telephone:active {
+    border-color: #ee3643;
+
+    outline: none;
 }
 
 .contact-telephone::before {
@@ -439,6 +449,7 @@ header {
 /*=============================== nav ===============================*/
 
 .navigation {
+    margin-bottom: 60px;
     padding-bottom: 60px;
 }
 
@@ -485,3 +496,392 @@ header {
 
     background-color: #1d2739;
 }
+
+
+/*=========================== main ==========================================*/
+
+
+/*=================================== category ======================================*/
+
+.category-lyst {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.category-top .category-lyst li:nth-child(1) {
+    background-color: #ffbf47;
+}
+
+.category-top .category-lyst li:nth-child(2) {
+    background-color: #3bbce3;
+}
+
+.category-top .category-lyst li:nth-child(3) {
+    margin-right: 0;
+
+    background-color: #dc91d8;
+}
+
+.category-item {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.category-item-wrap {
+    width: 135px;
+    margin-left: 23px;
+
+}
+
+.category-item h3 {
+    margin: 0;
+    margin-top: 20px;
+   
+    padding: 0;
+
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.category-item a {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-top: 12px;
+    padding-left: 25px;
+    padding-bottom: 9px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+    
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.category-item a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.category-item a:focus,
+.category-item a:active {
+    background: rgba(0, 0, 0, 0.3);
+
+    outline: none;
+}
+
+.category-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.category-aside .category-lyst {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-bottom .category-lyst li {
+    margin-right: 0;
+}
+
+.category-bottom .category-lyst li:nth-child(1) {
+    background-color: #8ed78f;
+}
+
+.category-bottom .category-lyst li:nth-child(2) {
+    background-color: #ff8447;
+}
+
+
+.category-top .category-lyst li:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 42px;
+
+    width: 44px;
+    height: 65px;
+
+    background-image: url(../img/materials.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-top .category-lyst li:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 60px;
+    height: 59px;
+
+    background-image: url(../img/new-line.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-top .category-lyst li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 28px;
+
+    width: 75px;
+    height: 61px;
+
+    background-image: url(../img/instrument.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-top .category-lyst li:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 31px;
+
+    width: 78px;
+    height: 62px;
+
+    background-image: url(../img/tehnika.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-bottom .category-lyst li:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 44px;
+
+    width: 59px;
+    height: 72px;
+
+    background-image: url(../img/skidki.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-bottom .category-lyst li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: 31px;
+
+    width: 78px;
+    height: 63px;
+
+    background-image: url(../img/delivery.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+/*=========================== slider ===================================*/
+
+.category-slider {
+    position: relative;
+
+    width: 620px;
+
+}
+
+.category-slider h3 {
+    margin: 0;
+    margin-left: 23px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+.category-slider p {
+    margin: 0;
+    margin-left: 23px;
+    margin-bottom: 120px;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.main-slider-button {
+    display: inline-block;
+    margin-left: 25px;
+    padding: 10px 45px;
+
+    text-decoration: none;
+    color: #ffffff;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.category-slider-first {
+    
+    background-image: url(../img/first-slide.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.category-slider-second {
+    
+    background-image: url(../img/second-slide.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.main-slider-button:hover {
+    background-color: #ca2c37;
+}
+
+.main-slider-button:focus,
+.main-slider-button:active {
+    background-color: #ba2732;
+
+    outline: none;
+}
+
+.slider-control-follow {
+    position: absolute;
+    top: 114px;
+    left: 25px;
+
+    width: 22px;
+    height: 40px; 
+
+    background-color: transparent;
+    border: none;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.slider-control-next {
+    position: absolute;
+    top: 114px;
+    right: 22px;
+
+    width: 22px;
+    height: 40px; 
+
+    background-color: transparent;
+    border: none;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.slider-control-follow::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: -5px;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: #ffffff;
+    transform: rotate(45deg);
+
+    cursor: pointer;
+}
+
+.slider-control-follow::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -5px;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+
+    cursor: pointer;
+}
+
+.slider-control-next::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -5px;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: #ffffff;
+    transform: rotate(45deg);
+
+    cursor: pointer;
+}
+
+.slider-control-next::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: -5px;
+
+    width: 29px;
+    height: 3px;
+
+    background-color: #ffffff;
+    transform: rotate(-45deg);
+
+    cursor: pointer;
+}
+
+.slider-control-next:hover::before,
+.slider-control-next:hover::after,
+.slider-control-follow:hover::before,
+.slider-control-follow:hover::after {
+    opacity: 0.5;
+}
+
+.slider-control-next:active::before,
+.slider-control-next:active::after,
+.slider-control-next:focus::before,
+.slider-control-next:focus::after,
+.slider-control-follow:active::before,
+.slider-control-follow:active::after,
+.slider-control-follow:focus::before,
+.slider-control-follow:focus::after {
+    opacity: 0.2;
+}
+
+.slide-on {
+    display: block;
+  }
+  
+  .slide-off {
+    display: none;
+  }
