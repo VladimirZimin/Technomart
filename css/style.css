@@ -503,6 +503,10 @@ header {
 
 /*=================================== category ======================================*/
 
+.category {
+    margin-bottom: 32px;
+}
+
 .category-lyst {
     position: relative;
 
@@ -702,11 +706,19 @@ header {
 
 /*=========================== slider ===================================*/
 
+
+.slider {
+    position: relative;
+
+    display: flex;
+    height: 266px;
+}
+
 .category-slider {
     position: relative;
 
     width: 620px;
-
+    min-height: 266px;
 }
 
 .category-slider h3 {
@@ -746,14 +758,14 @@ header {
 }
 
 .category-slider-first {
-    
+    background-color: rgb(144, 128, 98);
     background-image: url(../img/first-slide.jpg);
     background-repeat: no-repeat;
     background-position: 0 0;
 }
 
 .category-slider-second {
-    
+    background-color: rgb(144, 128, 98);
     background-image: url(../img/second-slide.jpg);
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -770,7 +782,7 @@ header {
     outline: none;
 }
 
-.slider-control-follow {
+.slider-control-back {
     position: absolute;
     top: 114px;
     left: 25px;
@@ -800,7 +812,7 @@ header {
     cursor: pointer;
 }
 
-.slider-control-follow::before {
+.slider-control-back::before {
     content: "";
     position: absolute;
     top: 27px;
@@ -815,7 +827,7 @@ header {
     cursor: pointer;
 }
 
-.slider-control-follow::after {
+.slider-control-back::after {
     content: "";
     position: absolute;
     top: 8px;
@@ -862,8 +874,8 @@ header {
 
 .slider-control-next:hover::before,
 .slider-control-next:hover::after,
-.slider-control-follow:hover::before,
-.slider-control-follow:hover::after {
+.slider-control-back:hover::before,
+.slider-control-back:hover::after {
     opacity: 0.5;
 }
 
@@ -871,10 +883,10 @@ header {
 .slider-control-next:active::after,
 .slider-control-next:focus::before,
 .slider-control-next:focus::after,
-.slider-control-follow:active::before,
-.slider-control-follow:active::after,
-.slider-control-follow:focus::before,
-.slider-control-follow:focus::after {
+.slider-control-back:active::before,
+.slider-control-back:active::after,
+.slider-control-back:focus::before,
+.slider-control-back:focus::after {
     opacity: 0.2;
 }
 
@@ -885,3 +897,49 @@ header {
   .slide-off {
     display: none;
   }
+
+  /*=================================== promo ===============================*/
+
+.promo-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f5f0;
+}
+
+.promo-title h2 {
+    margin-top: 30px;
+    margin-left: 28px;
+    margin-bottom: 28px;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.promo-title a {
+    display: inline-block;
+    margin: 25px;
+    padding: 10px 54px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.promo-title a:hover {
+    background-color: #ca2c37;
+}
+
+.promo-title a:focus,
+.promo-title a:active {
+    background-color: #ba2732;
+
+    outline: none;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
