@@ -903,6 +903,8 @@ header {
 .promo-title {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 21px;
+
     background-color: #f9f5f0;
 }
 
@@ -943,3 +945,131 @@ header {
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
+.promo-products-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.promo-products-list li:last-child {
+    margin-right: 0;
+}
+
+.promo-products-item {
+    position: relative;
+    
+    width: 220px;
+    margin-right: 20px;
+
+    border: 1px solid #eaeaea;
+}
+
+.promo-products-item-bosch {
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+    min-height: 175px;
+
+    line-height: 175px;
+    text-align: center;
+}
+
+.promo-products-item-bosch img {
+    vertical-align: middle;
+}
+
+.promo-products-item h3 {
+    margin: 0;
+    margin-left: 2px;
+    margin-bottom: 12px;
+    padding: 0;
+    
+    font-family: "PT Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: none;
+    text-align: center;
+    color: #000000;
+  }
+
+.promo-products-item-price {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.promo-products-item-price .discount {
+    margin-bottom: 9px;
+
+    font-family: "PT Sans";
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    color: #a9a9a9;
+    }
+
+.promo-products-item-price .price {
+    position: relative;
+
+    width: 86px;
+    margin-left: 42px;
+    margin-bottom: 20px;
+    padding: 10px 0px;
+    padding-left: 27px;
+    padding-right: 8px;
+
+    font-family: "PT Sans";
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+
+    z-index: 10;
+}
+
+.promo-products-item-price .price::before {
+    content: "";
+    position: absolute;
+    left: 107px;
+    top: 6px;
+
+    width: 27px;
+    height: 26px;
+  
+    background-color: #ee3643;
+
+    transform: rotate(45deg);
+}
+
+.promo-products-list li:last-child .price {
+    margin-top: 18px;
+}
+
+.promo-products-list li:last-child::after {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 60px;
+    height: 59px;
+
+    background-image: url(../img/new-line.png);
+    background-repeat: no-repeat;
+    background-position: 0 0; 
+} 
+  
