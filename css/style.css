@@ -42,7 +42,7 @@ input[type="radio"].visually-hidden {
 }
 
 header {
-    background-color: #f4f7f9;
+    background-image: url(../img/bg-grey.jpg);
 }
 
 /*=============================== header ============================*/
@@ -90,14 +90,14 @@ header {
     border-bottom: 5px solid #b52933;
 }
 
-.logo a:hover::before {
+.logo a:hover::before,
+.logo a:focus::before {
     background-color: #ca2c37;
     border-top: 1px solid #e03643;
     border-bottom: 5px solid #9a212a;
 }
 
-.logo a:active::before,
-.logo a:focus::before {
+.logo a:active::before {
     background-color: #ba2732;
     border-top: 1px solid #b02834;
     border-bottom: 5px solid #8e1e26;
@@ -480,6 +480,10 @@ header {
 
 .main-navigation-current a {
     padding-left: 53px;
+
+    background-color: #293449;
+
+    cursor: default;
 }
 
 .main-navigation li:last-child a {
@@ -495,6 +499,8 @@ header {
     color: rgba(255, 255, 255, 0.5);
 
     background-color: #1d2739;
+
+    outline: none;
 }
 
 
@@ -922,11 +928,13 @@ header {
 
 .promo-title a {
     display: inline-block;
+    width: 255px;
     margin: 25px;
-    padding: 10px 54px;
+    padding: 10px 0px;
 
-    color: #ffffff;
     text-decoration: none;
+    text-align: center;
+    color: #ffffff;
 
     background-color: #ee3643;
     border-radius: 3px;
@@ -949,6 +957,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
 
     list-style: none;
@@ -979,6 +988,100 @@ header {
 
 .promo-products-item-bosch img {
     vertical-align: middle;
+}
+
+.promo-product-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: #ffffff;
+}
+
+.promo-product-button a {
+    position: relative;
+
+    display: inline-block;
+    margin: 45px 42px 10px 42px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: #63a63e;
+    border-bottom: 3px solid #367315;
+    border-radius: 3px;
+}
+
+.promo-product-button a::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 15px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url(../img/cart-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+.promo-product-button a:hover {
+    background-color: #5fbb2d;
+}
+
+.promo-product-button a:focus,
+.promo-product-button a:active {
+    padding-bottom: 13px;
+
+    background-color: #518534;
+    border-bottom: none;
+
+    outline: none;
+}
+
+.promo-product-button a:hover::before,
+.promo-product-button a:focus::before,
+.promo-product-button a:active::before {
+    opacity: 1;
+}
+
+.promo-product-button button {
+    margin: 0px 42px 35px 42px;
+    padding: 10px 0;
+
+    font: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #32425c;
+
+    background-color: #ffffff;
+    border: 3px solid #63a63e;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.promo-product-button button:hover {
+    border-color: #32425c;
+}
+
+.promo-product-button button:focus,
+.promo-product-button button:active {
+    border-color: #32425c;
+
+    opacity: 0.3;
+    outline: none;
 }
 
 .promo-products-item h3 {
@@ -1072,4 +1175,299 @@ header {
     background-repeat: no-repeat;
     background-position: 0 0; 
 } 
+
+.promo-products-item:hover {
+    box-shadow: 0px 0px 20px 3px rgba(41,52,73,0.3);
+}
+
+.promo-products-item:hover .promo-product-button {
+    display: flex;
+}
+      
+
   
+/*======================================= promo-partners ======================================*/
+  
+.promo-partners-list{
+    display: flex;
+    
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.promo-partners-list li {
+    box-sizing: border-box;
+    width: 220px; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    border: 1px solid #eaeaea;
+}
+
+.promo-partners-list li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.promo-partners-list a {
+    position: relative;
+
+    display: block;
+    height: 145px;
+}
+
+.promo-partners-list img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.promo-partners-list a:hover,
+.promo-partners-list a:focus {
+    box-shadow: 0 10px 25px 0 rgba(41,52,73,0.5);
+
+    outline: none;
+}
+
+.promo-partners-list a:active {
+    box-shadow: 0 4px 10px 0 rgba(41,52,73,0.5);
+
+    opacity: 0.3;
+}
+
+
+/*========================================== service ======================================*/
+
+
+.service {
+    background-image: url(../img/bg-grey.jpg);
+}
+
+.service h1 {
+    margin: 0;
+    margin-bottom: 26px;
+    padding: 0;
+    padding-top: 67px;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.service p {
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    color: #000000;
+}
+
+.service-slider {
+    display: flex;
+}
+
+.service-list {
+    position: relative;
+
+    margin: 0;
+    margin-top: 45px;
+    margin-bottom: 103px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.service-list::after {
+    content: "";
+
+    position: absolute;
+    top: -25%;
+    right: 0px;
+    
+    width: 10px;
+    height: 279px;
+
+    background-image: url(../img/service-shadow.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.service-item button {
+    width: 240px;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 21px;
+
+    font: inherit;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: left;
+    color: #ffffff;
+
+    background-color: #32425c;
+    border: none;
+    border-bottom: 1px solid #4d637b ;
+
+    cursor: pointer;
+}
+
+.service-item button:hover {
+    background-color: #293449;
+}
+
+.service-item button:focus {
+    background-color: #293449;
+
+    outline: none;
+}
+
+.service-item li button:last-child {
+    border-bottom: none;
+}
+
+.service-item .active-button,
+.service-item .active-button:hover,
+.service-item .active-button:focus {
+    color: #32425c;
+
+    background-color: #ffffff;
+    border-bottom: none;
+
+    outline: none;
+}
+
+.service-features {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    margin-left: 80px;
+}
+
+
+.service-slide-on {
+    display: block;
+}
+
+.service-slide-off {
+    display: none;
+}
+
+.service-features h2 {
+    margin: 0;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.service-features p {
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    color: #000000;
+}
+
+.service-credit p {
+    margin-bottom: 20px;
+}
+
+.service-credit button {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 45px;
+
+    font: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    background-color: #ee3643;
+    border: none;
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+
+.service-credit button:hover {
+    background-color: #ca2c37;
+}
+
+.service-credit button:focus,
+.service-credit button:active {
+    background-color: #ba2732;
+
+    outline: none;
+}
+
+.service-delivery p::after {
+    content: "";
+
+    position: absolute;
+    top: -36px;
+    right: 1px;
+
+    width: 468px;
+    height: 261px;
+
+    background-image: url(../img/service-delivery.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.service-guarantee p::after {
+    content: "";
+
+    position: absolute;
+    top: -57px;
+    right: -75px;
+
+    width: 468px;
+    height: 261px;
+
+    background-image: url(../img/service-guarantee.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.service-credit p::after {
+    content: "";
+
+    position: absolute;
+    top: -57px;
+    right: -40px;
+
+    width: 468px;
+    height: 261px;
+
+    background-image: url(../img/service-credit.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
