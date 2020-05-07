@@ -1276,6 +1276,7 @@ header {
 
 .service-slider {
     display: flex;
+    margin-bottom: 80px;
 }
 
 .service-list {
@@ -1470,4 +1471,152 @@ header {
     background-image: url(../img/service-credit.png);
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+
+
+/*=================================== about =========================================*/
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+}
+
+.about-shop {
+    width: 540px;
+}
+
+.about-shop ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.about h2 {
+    margin: 0;
+    margin-bottom: 26px;
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.about p {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    color: #000000;
+}
+
+.about-partner-item {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    padding-left: 36px;
+
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: none;
+    color: #000000;
+}
+
+.about-partner-item::before {
+    content: "";
+
+    position: absolute;
+    top: 9px;
+    left: 0;
+
+    width: 25px;
+    height: 2px;
+
+    background-color: #ee3643;
+}
+
+.info-list li:first-child p {
+    margin-bottom: 24px;
+}
+
+.info-list li:last-child p {
+    margin-bottom: 21px;
+}
+
+.about-shop .about-partner-list {
+    margin-bottom: 36px;
+}
+
+.contact {
+    width: 300px;
+}
+
+.contact iframe {
+    margin-top: 31px;
+    margin-bottom: 35px;
+}
+
+.about .button {
+    display: inline-block;
+    padding: 10px 40px;
+
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
+.about button {
+    width: 100%;
+
+    font: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.about .button:hover {
+    background-color: #ca2c37;
+}
+
+.about .button:focus,
+.about .button:active {
+    background-color: #ba2732;
+
+    outline: none;
+}
+
+
+
+/*============================ footer ======================================*/
+
+.footer-top {
+    background-color: #32425c;
+}
+
+.footer-top .container {
+    position: relative;
+}
+
+.footer-bottom {
+    background-color: #293449;
 }
