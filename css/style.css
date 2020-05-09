@@ -460,7 +460,7 @@ header {
 
 .main-navigation {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 
@@ -487,7 +487,7 @@ header {
 }
 
 .main-navigation li:last-child a {
-    padding-right: 55px;
+    padding-right: 59px;
 }
 
 .main-navigation a:hover {
@@ -956,8 +956,8 @@ header {
 .promo-products-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
-    margin-bottom: 20px;
     padding: 0;
 
     list-style: none;
@@ -970,8 +970,12 @@ header {
 .promo-products-item {
     position: relative;
     
+    box-sizing: border-box;
     width: 220px;
+    margin: 0;
     margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 0;
 
     border: 1px solid #eaeaea;
 }
@@ -1620,3 +1624,204 @@ header {
 .footer-bottom {
     background-color: #293449;
 }
+
+.footer-top .logo a {
+    margin-bottom: 91px;
+
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.footer-top .logo a::before {
+    content: "ТЕХНОМАРТ";
+
+    position: absolute;
+    top: 0;
+    left: 0px;
+
+    width: 220px;
+    padding: 19px 0;
+    padding-bottom: 14px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+    border-top: 1px solid #bf2d38;
+    border-bottom: 5px solid #b52933;
+}
+
+.footer-top .logo a:hover::before,
+.footer-top .logo a:focus::before {
+    background-color: #ca2c37;
+    border-top: 1px solid #e03643;
+    border-bottom: 5px solid #9a212a;
+}
+
+.footer-top .logo a:active::before {
+    background-color: #ba2732;
+    border-top: 1px solid #b02834;
+    border-bottom: 5px solid #8e1e26;
+}
+
+.footer-top-wrapp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav-list,
+.market-nav-list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 555px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-nav-item a,
+.market-nav-item a {
+    display: inline-block;
+    margin-right: 60px;
+
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-nav-item {
+    padding-top: 38px;
+}
+
+.market-nav-list a {
+    color: #ffda96;
+}
+
+.footer-nav-list .footer-nav-item:last-child a,
+.market-nav-list .market-nav-item:last-child a {
+    margin-right: 0;
+}
+
+.market-nav-list {
+    margin-bottom: 74px;
+}
+
+.footer-address {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.footer-tel {
+    display: block;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/*============================ footer-bottom ====================================*/
+
+.footer-bottom {
+    padding: 37px 0;
+    background-color: #293449;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copy {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    margin-right: 5px;
+
+    background-color: #212a3a;
+    border-radius: 50%;
+}
+
+.social-button:hover,
+.social-button:focus,
+.social-button:active {
+    background-color: #ee3643;
+}
+
+.developmen {
+    display: flex;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+    list-style: none;
+}
+
+.developmen a {
+    text-decoration: none;
+    color: #ffda96;
+}
+
+.developmen li:last-child {
+    margin-left: 50px;
+}
+
+
+.footer-nav-item a:hover,
+.footer-nav-item a:focus,
+.market-nav-item a:hover,
+.market-nav-item a:focus,
+.developmen a:hover,
+.developmen a:focus {
+    text-decoration: underline;
+}
+
+.footer-nav-item a:active,
+.market-nav-item a:active {
+    opacity: 0.5;
+}
+
+.developmen a:active {
+    color: #ee3643;
+}
+
