@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Техномарт</title>
@@ -48,7 +48,7 @@
             </div>
         </section>
 
-        <nav class="navigation ">
+        <nav class="navigation">
             <div class="container">
                 <ul class="main-navigation">
                     <li class="main-navigation-current"><a>Главная</a></li>
@@ -337,7 +337,7 @@
                     <li class="about-partner-item">Автотрейдинг</li>
                     <li class="about-partner-item">ЖелДорЭкспедиция</li>
                 </ul> 
-                <a href="about" class="button">Подробнее о компании</a>
+                <a href="about" class="button map-button">Подробнее о компании</a>
             </div>
 
             <div class="contact">
@@ -346,8 +346,11 @@
                     Вы можете забрать товар сами, <br>
                     заехав в наш офис:
                 </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9430750619126!2d30.49698324929059!3d50.44216096670527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef3ddbfa8cd%3A0xa08a1e86eb81538c!2z0YPQuy4g0KHQsNC60YHQsNCz0LDQvdGB0LrQvtCz0L4sIDExOSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1588886730072!5m2!1sru!2sua" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                <button type="button"  class="button">Заблудились? Напишите нам</button>
+                <div class="contact-map">
+                    <img src="img/map.png" alt="Наш адрес город Киев, улица..." width="300" height="158">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.9430750619126!2d30.49698324929059!3d50.44216096670527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef3ddbfa8cd%3A0xa08a1e86eb81538c!2z0YPQuy4g0KHQsNC60YHQsNCz0LDQvdGB0LrQvtCz0L4sIDExOSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1588886730072!5m2!1sru!2sua" width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <button type="button"  class="button js-button">Заблудились? Напишите нам</button>
             </div>
         </section>
 
@@ -441,7 +444,42 @@
 
     </footer>
 
+    <section class="modal modal-write-us">
+        <h2 class="visually-hidden">Напишите нам!</h2>
+        <button class="modal-close" type="button" name="modal-close">Закрыть</button>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form-answer">
+            <div>
+              <label>
+                <span class="form-answer-title">Ваше имя:</span>
+                <input class="form-input" type="text" name="name" placeholder="Имя Фамилия" aria-label="Ваше-имя">
+              </label>
+            </div>
+            <div>
+              <label>
+                <span class="form-answer-title">Ваш e-mail:</span>
+                <input class="form-input" type="email" name="email" placeholder="email@example.com" aria-label="Ваш-e-mail">
+              </label>
+            </div>
+          </div>
+          <div class="form-text-area">
+            <label>
+              <span class="form-answer-title">Текст письма:</span>
+              <textarea name="letter-text" placeholder="В свободной форме"></textarea>
+            </label>
+          </div>
+          <button class="red-button feedback-button" type="submit" name="feedback-button">Отправить</button>
+        </form>
+      </section>
+
+      <section class="modal modal-map">
+        <button class="modal-close" type="button" name="modal-close">Закрыть</button>
+        <h2 class="visually-hidden">Как проехать</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858716324643!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1552421851513" width="940" height="446" style="border: none;" allowfullscreen=""></iframe>
+      </section>
+
     <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
